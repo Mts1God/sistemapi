@@ -30,14 +30,6 @@ namespace ProjetoPI
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmParceiros));
-            this.pnlParceiros = new System.Windows.Forms.Panel();
-            this.btnLimpar = new System.Windows.Forms.Button();
-            this.btnNovo = new System.Windows.Forms.Button();
-            this.btnVoltar = new System.Windows.Forms.Button();
-            this.btnPesquisar = new System.Windows.Forms.Button();
-            this.btnExcluir = new System.Windows.Forms.Button();
-            this.btnAlterar = new System.Windows.Forms.Button();
-            this.btnCadastrar = new System.Windows.Forms.Button();
             this.gpbInfoMedico = new System.Windows.Forms.GroupBox();
             this.pctlogo = new System.Windows.Forms.PictureBox();
             this.txtComplemento = new System.Windows.Forms.TextBox();
@@ -64,109 +56,18 @@ namespace ProjetoPI
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.lblNome = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
-            this.pnlParceiros.SuspendLayout();
+            this.pnlParceiros = new System.Windows.Forms.Panel();
+            this.btnLimpar = new System.Windows.Forms.Button();
+            this.btnNovo = new System.Windows.Forms.Button();
+            this.btnVoltar = new System.Windows.Forms.Button();
+            this.btnPesquisar = new System.Windows.Forms.Button();
+            this.btnExcluir = new System.Windows.Forms.Button();
+            this.btnAlterar = new System.Windows.Forms.Button();
+            this.btnCadastrar = new System.Windows.Forms.Button();
             this.gpbInfoMedico.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctlogo)).BeginInit();
+            this.pnlParceiros.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // pnlParceiros
-            // 
-            this.pnlParceiros.Controls.Add(this.btnLimpar);
-            this.pnlParceiros.Controls.Add(this.btnNovo);
-            this.pnlParceiros.Controls.Add(this.btnVoltar);
-            this.pnlParceiros.Controls.Add(this.btnPesquisar);
-            this.pnlParceiros.Controls.Add(this.btnExcluir);
-            this.pnlParceiros.Controls.Add(this.btnAlterar);
-            this.pnlParceiros.Controls.Add(this.btnCadastrar);
-            this.pnlParceiros.Location = new System.Drawing.Point(17, 485);
-            this.pnlParceiros.Name = "pnlParceiros";
-            this.pnlParceiros.Size = new System.Drawing.Size(771, 72);
-            this.pnlParceiros.TabIndex = 14;
-            // 
-            // btnLimpar
-            // 
-            this.btnLimpar.Image = ((System.Drawing.Image)(resources.GetObject("btnLimpar.Image")));
-            this.btnLimpar.Location = new System.Drawing.Point(554, 17);
-            this.btnLimpar.Name = "btnLimpar";
-            this.btnLimpar.Size = new System.Drawing.Size(96, 43);
-            this.btnLimpar.TabIndex = 19;
-            this.btnLimpar.Text = "&Limpar";
-            this.btnLimpar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnLimpar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnLimpar.UseVisualStyleBackColor = true;
-            // 
-            // btnNovo
-            // 
-            this.btnNovo.Image = ((System.Drawing.Image)(resources.GetObject("btnNovo.Image")));
-            this.btnNovo.Location = new System.Drawing.Point(7, 17);
-            this.btnNovo.Name = "btnNovo";
-            this.btnNovo.Size = new System.Drawing.Size(96, 43);
-            this.btnNovo.TabIndex = 14;
-            this.btnNovo.Text = "&Novo";
-            this.btnNovo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnNovo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnNovo.UseVisualStyleBackColor = true;
-            // 
-            // btnVoltar
-            // 
-            this.btnVoltar.Image = ((System.Drawing.Image)(resources.GetObject("btnVoltar.Image")));
-            this.btnVoltar.Location = new System.Drawing.Point(666, 17);
-            this.btnVoltar.Name = "btnVoltar";
-            this.btnVoltar.Size = new System.Drawing.Size(96, 43);
-            this.btnVoltar.TabIndex = 20;
-            this.btnVoltar.Text = "&Voltar";
-            this.btnVoltar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnVoltar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnVoltar.UseVisualStyleBackColor = true;
-            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
-            // 
-            // btnPesquisar
-            // 
-            this.btnPesquisar.Image = ((System.Drawing.Image)(resources.GetObject("btnPesquisar.Image")));
-            this.btnPesquisar.Location = new System.Drawing.Point(439, 17);
-            this.btnPesquisar.Name = "btnPesquisar";
-            this.btnPesquisar.Size = new System.Drawing.Size(96, 43);
-            this.btnPesquisar.TabIndex = 18;
-            this.btnPesquisar.Text = "&Pesquisar";
-            this.btnPesquisar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnPesquisar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnPesquisar.UseVisualStyleBackColor = true;
-            // 
-            // btnExcluir
-            // 
-            this.btnExcluir.Image = ((System.Drawing.Image)(resources.GetObject("btnExcluir.Image")));
-            this.btnExcluir.Location = new System.Drawing.Point(327, 17);
-            this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(96, 43);
-            this.btnExcluir.TabIndex = 17;
-            this.btnExcluir.Text = "E&xcluir";
-            this.btnExcluir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnExcluir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnExcluir.UseVisualStyleBackColor = true;
-            // 
-            // btnAlterar
-            // 
-            this.btnAlterar.Image = ((System.Drawing.Image)(resources.GetObject("btnAlterar.Image")));
-            this.btnAlterar.Location = new System.Drawing.Point(218, 17);
-            this.btnAlterar.Name = "btnAlterar";
-            this.btnAlterar.Size = new System.Drawing.Size(96, 43);
-            this.btnAlterar.TabIndex = 16;
-            this.btnAlterar.Text = "&Alterar";
-            this.btnAlterar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAlterar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAlterar.UseVisualStyleBackColor = true;
-            // 
-            // btnCadastrar
-            // 
-            this.btnCadastrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCadastrar.Image")));
-            this.btnCadastrar.Location = new System.Drawing.Point(114, 17);
-            this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(96, 43);
-            this.btnCadastrar.TabIndex = 15;
-            this.btnCadastrar.Text = "&Cadastrar";
-            this.btnCadastrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCadastrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnCadastrar.UseVisualStyleBackColor = true;
             // 
             // gpbInfoMedico
             // 
@@ -437,35 +338,124 @@ namespace ProjetoPI
             this.lblEmail.TabIndex = 8;
             this.lblEmail.Text = "E-mail";
             // 
+            // pnlParceiros
+            // 
+            this.pnlParceiros.Controls.Add(this.btnLimpar);
+            this.pnlParceiros.Controls.Add(this.btnNovo);
+            this.pnlParceiros.Controls.Add(this.btnVoltar);
+            this.pnlParceiros.Controls.Add(this.btnPesquisar);
+            this.pnlParceiros.Controls.Add(this.btnExcluir);
+            this.pnlParceiros.Controls.Add(this.btnAlterar);
+            this.pnlParceiros.Controls.Add(this.btnCadastrar);
+            this.pnlParceiros.Location = new System.Drawing.Point(17, 497);
+            this.pnlParceiros.Name = "pnlParceiros";
+            this.pnlParceiros.Size = new System.Drawing.Size(771, 72);
+            this.pnlParceiros.TabIndex = 16;
+            // 
+            // btnLimpar
+            // 
+            this.btnLimpar.Image = ((System.Drawing.Image)(resources.GetObject("btnLimpar.Image")));
+            this.btnLimpar.Location = new System.Drawing.Point(554, 17);
+            this.btnLimpar.Name = "btnLimpar";
+            this.btnLimpar.Size = new System.Drawing.Size(96, 43);
+            this.btnLimpar.TabIndex = 19;
+            this.btnLimpar.Text = "&Limpar";
+            this.btnLimpar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLimpar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnLimpar.UseVisualStyleBackColor = true;
+            // 
+            // btnNovo
+            // 
+            this.btnNovo.Image = ((System.Drawing.Image)(resources.GetObject("btnNovo.Image")));
+            this.btnNovo.Location = new System.Drawing.Point(7, 17);
+            this.btnNovo.Name = "btnNovo";
+            this.btnNovo.Size = new System.Drawing.Size(96, 43);
+            this.btnNovo.TabIndex = 14;
+            this.btnNovo.Text = "&Novo";
+            this.btnNovo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnNovo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnNovo.UseVisualStyleBackColor = true;
+            // 
+            // btnVoltar
+            // 
+            this.btnVoltar.Image = ((System.Drawing.Image)(resources.GetObject("btnVoltar.Image")));
+            this.btnVoltar.Location = new System.Drawing.Point(666, 17);
+            this.btnVoltar.Name = "btnVoltar";
+            this.btnVoltar.Size = new System.Drawing.Size(96, 43);
+            this.btnVoltar.TabIndex = 20;
+            this.btnVoltar.Text = "&Voltar";
+            this.btnVoltar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnVoltar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnVoltar.UseVisualStyleBackColor = true;
+            // 
+            // btnPesquisar
+            // 
+            this.btnPesquisar.Image = ((System.Drawing.Image)(resources.GetObject("btnPesquisar.Image")));
+            this.btnPesquisar.Location = new System.Drawing.Point(439, 17);
+            this.btnPesquisar.Name = "btnPesquisar";
+            this.btnPesquisar.Size = new System.Drawing.Size(96, 43);
+            this.btnPesquisar.TabIndex = 18;
+            this.btnPesquisar.Text = "&Pesquisar";
+            this.btnPesquisar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnPesquisar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPesquisar.UseVisualStyleBackColor = true;
+            // 
+            // btnExcluir
+            // 
+            this.btnExcluir.Image = ((System.Drawing.Image)(resources.GetObject("btnExcluir.Image")));
+            this.btnExcluir.Location = new System.Drawing.Point(327, 17);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(96, 43);
+            this.btnExcluir.TabIndex = 17;
+            this.btnExcluir.Text = "E&xcluir";
+            this.btnExcluir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnExcluir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnExcluir.UseVisualStyleBackColor = true;
+            // 
+            // btnAlterar
+            // 
+            this.btnAlterar.Image = ((System.Drawing.Image)(resources.GetObject("btnAlterar.Image")));
+            this.btnAlterar.Location = new System.Drawing.Point(218, 17);
+            this.btnAlterar.Name = "btnAlterar";
+            this.btnAlterar.Size = new System.Drawing.Size(96, 43);
+            this.btnAlterar.TabIndex = 16;
+            this.btnAlterar.Text = "&Alterar";
+            this.btnAlterar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAlterar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAlterar.UseVisualStyleBackColor = true;
+            // 
+            // btnCadastrar
+            // 
+            this.btnCadastrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCadastrar.Image")));
+            this.btnCadastrar.Location = new System.Drawing.Point(114, 17);
+            this.btnCadastrar.Name = "btnCadastrar";
+            this.btnCadastrar.Size = new System.Drawing.Size(96, 43);
+            this.btnCadastrar.TabIndex = 15;
+            this.btnCadastrar.Text = "&Cadastrar";
+            this.btnCadastrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCadastrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCadastrar.UseVisualStyleBackColor = true;
+            // 
             // frmParceiros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 572);
-            this.Controls.Add(this.gpbInfoMedico);
             this.Controls.Add(this.pnlParceiros);
+            this.Controls.Add(this.gpbInfoMedico);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "frmParceiros";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmParceiros";
-            this.pnlParceiros.ResumeLayout(false);
             this.gpbInfoMedico.ResumeLayout(false);
             this.gpbInfoMedico.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctlogo)).EndInit();
+            this.pnlParceiros.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel pnlParceiros;
-        private System.Windows.Forms.Button btnLimpar;
-        private System.Windows.Forms.Button btnNovo;
-        private System.Windows.Forms.Button btnVoltar;
-        private System.Windows.Forms.Button btnPesquisar;
-        private System.Windows.Forms.Button btnExcluir;
-        private System.Windows.Forms.Button btnAlterar;
-        private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.GroupBox gpbInfoMedico;
         private System.Windows.Forms.TextBox txtNum;
         private System.Windows.Forms.Label lblNum;
@@ -492,5 +482,13 @@ namespace ProjetoPI
         private System.Windows.Forms.PictureBox pctlogo;
         private System.Windows.Forms.TextBox txtComplemento;
         private System.Windows.Forms.Label lblComplemento;
+        private System.Windows.Forms.Panel pnlParceiros;
+        private System.Windows.Forms.Button btnLimpar;
+        private System.Windows.Forms.Button btnNovo;
+        private System.Windows.Forms.Button btnVoltar;
+        private System.Windows.Forms.Button btnPesquisar;
+        private System.Windows.Forms.Button btnExcluir;
+        private System.Windows.Forms.Button btnAlterar;
+        private System.Windows.Forms.Button btnCadastrar;
     }
 }

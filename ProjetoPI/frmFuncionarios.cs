@@ -16,10 +16,10 @@ namespace ProjetoPI
         public frmFuncionarios()
         {
             InitializeComponent();
-            txtCodigo.Text = carregaCodigoFunc().ToString();
+            txtCodigo.Text = carregacodfunc().ToString();
         }
 
-        public int carregaCodigoFunc()
+        public int carregacodfunc()
         {
             MySqlCommand comm = new MySqlCommand();
             comm.CommandText = "select codfunc +1 from tbfuncionarios order by codfunc desc";
@@ -50,16 +50,25 @@ namespace ProjetoPI
         {
             MySqlCommand comm = new MySqlCommand();
 
-            comm.CommandText = "insert into DBSeuLixoAqui(nome,email,telefone,cpf,endereco,numero,cep,complemento,bairro,cidade,siglaEst)values(@nome,@email,@telefone,@cpf,@endereco,@numero,@cep,@complemento,@bairro,@cidade,@siglaEst); ";
+            comm.CommandText = "insert into tbFuncionarios(cargo,nome,email,endereco,telefone,cpf,cep,siglaEst,cidade,bairro,numero,complemento)values(@cargo,@nome,@email,@endereco,@telefone,@cpf,@cep,@siglaEst,@cidade,@bairro,@numero,@complemento); ";
             
             comm.CommandType = CommandType.Text;
 
             comm.Parameters.Clear();
 
-            comm.Parameters.Add("@nomefunc", MySqlDbType.VarChar, 100).Value = txtNome.Text;
-            comm.Parameters.Add("@emailfunc", MySqlDbType.VarChar, 100).Value = txtEmail.Text;
+            comm.Parameters.Add("@cargo", MySqlDbType.VarChar, 100).Value = txtCargo.Text;
+            comm.Parameters.Add("@nome", MySqlDbType.VarChar, 100).Value = txtNome.Text;
+            comm.Parameters.Add("@email", MySqlDbType.VarChar, 100).Value = txtEmail.Text;
+            comm.Parameters.Add("@endereco", MySqlDbType.VarChar, 100).Value = txtEndereco.Text;
             comm.Parameters.Add("@telefone", MySqlDbType.VarChar, 14).Value = mskTelefone.Text;
             comm.Parameters.Add("@cpf", MySqlDbType.VarChar, 14).Value = mskCPF.Text;
+            comm.Parameters.Add("@cep", MySqlDbType.VarChar, 8).Value = mskCEP.Text;
+            comm.Parameters.Add("@siglaEst", MySqlDbType.VarChar, 2).Value = cbbEstado.Text;
+            comm.Parameters.Add("@cidade", MySqlDbType.VarChar, 50).Value = txtCidade.Text;
+            comm.Parameters.Add("@bairro", MySqlDbType.VarChar, 50).Value = txtBairro.Text;
+            comm.Parameters.Add("@numero", MySqlDbType.VarChar, 10).Value = txtNum.Text;
+            comm.Parameters.Add("@complemento", MySqlDbType.VarChar, 50).Value = txtComplemento.Text;
+
 
             comm.CommandType = CommandType.Text;
 
@@ -67,7 +76,7 @@ namespace ProjetoPI
 
             int i = comm.ExecuteNonQuery();
 
-            MessageBox.Show("Paciente cadastrado com sucesso!!!" + i);
+            MessageBox.Show("Funcionario cadastrado com sucesso!!!" + i);
 
             Conexao.fecharConexao();
         }
@@ -91,18 +100,20 @@ namespace ProjetoPI
             return codigo;
         }
 
-        public void cadastrarUsuario(int codigo)
+        public void cadastarUsuario(int codigo)
         {
             MySqlCommand comm = new MySqlCommand();
 
-            comm.CommandText = "insert into tbusuarios(nomeUsu,senhaUsu, codfunc)values(@nomeUsu,@senhaUsu, " + codigo + ");";
+            comm.CommandText = "insert into tbusuarios(codUsu,nomeUsu,emailUsu,senhaUsu,codFunc)values(@codUsu,@nomeUsu,@emailUsu,@senhaUsu,@codFunc " + codigo + ");";
             comm.CommandType = CommandType.Text;
 
             comm.Parameters.Clear();
 
-            comm.Parameters.Add("@nomeUsu", MySqlDbType.VarChar, 100).Value = txtUsuario.Text;
-            comm.Parameters.Add("@senhaUsu", MySqlDbType.VarChar, 100).Value = txtSenha.Text;
-
+            comm.Parameters.Add("@nomeUsu", MySqlDbType.VarChar, 100).Value = txtNome.Text;
+            comm.Parameters.Add("@emailUsu", MySqlDbType.VarChar, 100).Value = txtEmail.Text;
+            //comm.Parameters.Add("@senhaUsu", MySqlDbType.VarChar, 18).Value = txtSenha.Text;
+            //comm.Parameters.Add("@telefoneUsu", MySqlDbType.VarChar, 14).Value = .Text;
+            
 
             comm.CommandType = CommandType.Text;
 
@@ -119,7 +130,7 @@ namespace ProjetoPI
         {
             cadastrarFuncionarios();
             int codUsu = pesquisacodigo(Convert.ToInt32(txtCodigo.Text));
-            cadastrarUsuario(Convert.ToInt32(codUsu));
+            cadastarUsuario(Convert.ToInt32(codUsu));
         }
     }
 }

@@ -58,7 +58,7 @@ namespace ProjetoPI
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.lblNome = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
-            this.pnlFuncionario = new System.Windows.Forms.Panel();
+            this.pnlParceiros = new System.Windows.Forms.Panel();
             this.btnLimpar = new System.Windows.Forms.Button();
             this.btnNovo = new System.Windows.Forms.Button();
             this.btnVoltar = new System.Windows.Forms.Button();
@@ -68,7 +68,7 @@ namespace ProjetoPI
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.gpbInfoMedico.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctlogo)).BeginInit();
-            this.pnlFuncionario.SuspendLayout();
+            this.pnlParceiros.SuspendLayout();
             this.SuspendLayout();
             // 
             // gpbInfoMedico
@@ -358,19 +358,19 @@ namespace ProjetoPI
             this.lblEmail.TabIndex = 8;
             this.lblEmail.Text = "E-mail";
             // 
-            // pnlFuncionario
+            // pnlParceiros
             // 
-            this.pnlFuncionario.Controls.Add(this.btnLimpar);
-            this.pnlFuncionario.Controls.Add(this.btnNovo);
-            this.pnlFuncionario.Controls.Add(this.btnVoltar);
-            this.pnlFuncionario.Controls.Add(this.btnPesquisar);
-            this.pnlFuncionario.Controls.Add(this.btnExcluir);
-            this.pnlFuncionario.Controls.Add(this.btnAlterar);
-            this.pnlFuncionario.Controls.Add(this.btnCadastrar);
-            this.pnlFuncionario.Location = new System.Drawing.Point(17, 482);
-            this.pnlFuncionario.Name = "pnlFuncionario";
-            this.pnlFuncionario.Size = new System.Drawing.Size(771, 72);
-            this.pnlFuncionario.TabIndex = 16;
+            this.pnlParceiros.Controls.Add(this.btnLimpar);
+            this.pnlParceiros.Controls.Add(this.btnNovo);
+            this.pnlParceiros.Controls.Add(this.btnVoltar);
+            this.pnlParceiros.Controls.Add(this.btnPesquisar);
+            this.pnlParceiros.Controls.Add(this.btnExcluir);
+            this.pnlParceiros.Controls.Add(this.btnAlterar);
+            this.pnlParceiros.Controls.Add(this.btnCadastrar);
+            this.pnlParceiros.Location = new System.Drawing.Point(13, 492);
+            this.pnlParceiros.Name = "pnlParceiros";
+            this.pnlParceiros.Size = new System.Drawing.Size(771, 72);
+            this.pnlParceiros.TabIndex = 18;
             // 
             // btnLimpar
             // 
@@ -407,7 +407,6 @@ namespace ProjetoPI
             this.btnVoltar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnVoltar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnVoltar.UseVisualStyleBackColor = true;
-            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
             // btnPesquisar
             // 
@@ -456,15 +455,14 @@ namespace ProjetoPI
             this.btnCadastrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCadastrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCadastrar.UseVisualStyleBackColor = true;
-            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // frmFuncionarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 566);
+            this.Controls.Add(this.pnlParceiros);
             this.Controls.Add(this.gpbInfoMedico);
-            this.Controls.Add(this.pnlFuncionario);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "frmFuncionarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -472,7 +470,7 @@ namespace ProjetoPI
             this.gpbInfoMedico.ResumeLayout(false);
             this.gpbInfoMedico.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctlogo)).EndInit();
-            this.pnlFuncionario.ResumeLayout(false);
+            this.pnlParceiros.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -505,7 +503,9 @@ namespace ProjetoPI
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.Label lblEmail;
-        private System.Windows.Forms.Panel pnlFuncionario;
+        private System.Windows.Forms.TextBox txtCargo;
+        private System.Windows.Forms.Label lblCargo;
+        private System.Windows.Forms.Panel pnlParceiros;
         private System.Windows.Forms.Button btnLimpar;
         private System.Windows.Forms.Button btnNovo;
         private System.Windows.Forms.Button btnVoltar;
@@ -513,7 +513,5 @@ namespace ProjetoPI
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Button btnAlterar;
         private System.Windows.Forms.Button btnCadastrar;
-        private System.Windows.Forms.TextBox txtCargo;
-        private System.Windows.Forms.Label lblCargo;
     }
 }
